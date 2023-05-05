@@ -14,16 +14,16 @@ print(f"\nHello {name}. At {age} years old you may or may not find this quiz a b
 
 show_instructions = input("Have you played this game before? :")
 
-if show_instructions == "yes":
+if show_instructions == "yes" or show_instructions == "y" or show_instructions == "Yes":
     print("program continues")
 
-elif show_instructions == "no":
+elif show_instructions == "no" or show_instructions == "n" or show_instructions == "No":
     print("Display instructions")
     print(f"\nSo {name}, in this quiz I will give you a word in Te Reo Maori.\n"
           f"\n You must answer the question in English, your answer could be the number or the word, good luck.\n")
 
 else:
-    print("please answer 'yes or 'no' ")
+    print("please answer 'yes or 'no' or 'y' or 'n'")
 
 print(f"entered '{show_instructions}' ")
 
