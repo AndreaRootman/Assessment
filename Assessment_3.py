@@ -58,4 +58,17 @@ while not valid:
     except ValueError:
         print(error)
 
+"""component 3 - Te Reo maori numbers"""
+
+import random
+
+
+
+
+
+
+
+
+
+
 
