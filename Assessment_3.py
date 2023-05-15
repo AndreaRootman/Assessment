@@ -20,7 +20,7 @@ if show_instructions == "yes" or show_instructions == "y" or show_instructions =
 elif show_instructions == "no" or show_instructions == "n" or show_instructions == "No":
     print("Display instructions")
     print(f"\nSo {name}, in this quiz I will give you a word in Te Reo Maori.\n"
-          f"\n You must answer the question in English, your answer could be the number or the word, good luck.\n")
+          f"\n You must answer the question only in number form, good luck.\n")
 
 else:
     print("please answer 'yes or 'no' ")
@@ -62,13 +62,19 @@ while not valid:
 
 import random
 
+#1ST lIST
+numbers = ["Tahi", "Rua", "Toru", "Wha", "Rima", "Ono", "Whitu", "waru", "Iwa", "Tekau"]
+#2ND LIST
+ans = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
+question = random.choice(numbers)
+attempt = input(f"What is the number for {question}: ")
 
+answer_index = numbers.index(question)
+answer = ans[answer_index]
 
+if attempt == answer:
+    print("####CORRECT!####\n")
 
-
-
-
-
-
-
+else:
+    print("XXXXINCORRECTXXXX\n")

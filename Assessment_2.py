@@ -20,7 +20,7 @@ if show_instructions == "yes" or show_instructions == "y" or show_instructions =
 elif show_instructions == "no" or show_instructions == "n" or show_instructions == "No":
     print("Display instructions")
     print(f"\nSo {name}, in this quiz I will give you a word in Te Reo Maori.\n"
-          f"\n You must answer the question in English, your answer could be the number or the word, good luck.\n")
+          f"\n You must answer the question only in number form, good luck.\n")
 
 else:
     print("please answer 'yes or 'no' ")
