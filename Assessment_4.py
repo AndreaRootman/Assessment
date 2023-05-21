@@ -29,13 +29,6 @@ print(f"entered '{show_instructions}' ")
 
 
 """component 2- Amount of questions the player wants"""
-Prompt = None
-while Prompt not in ("yes", "y", "n", "no"): #loop until the user inputs a valid answer
-        Prompt = input("Do you wish to continue? answer y or n\n")
-        if Prompt in ('y', 'yes'):
-            state = 2 # switch state to processing state
-        elif Prompt in ('n', 'no'): #cancel
-            break
 
 #confirm question amount
 def confirm_question_amount(question_number):
@@ -65,20 +58,9 @@ while not valid:
     except ValueError:
         print(error)
 
-
 """component 3 - Te Reo maori numbers"""
 
 import random
-
-def repeat_user_input(num_tries= num_questions):
-    tries = 0
-    result = []
-
-    while tries < num_tries:
-        tries += 1
-        result.append(float(input()))
-
-    return result
 
 #1ST lIST
 numbers = ["Tahi", "Rua", "Toru", "Wha", "Rima", "Ono", "Whitu", "waru", "Iwa", "Tekau"]
@@ -87,12 +69,24 @@ ans = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 question = random.choice(numbers)
 attempt = input(f"What is the number for {question}: ")
-
 answer_index = numbers.index(question)
 answer = ans[answer_index]
+required_number = num_questions
+while True:
+    number = eval(input("Enter the number\n"))
+    if number == answer:
+        print ("Correct")
+        break
+    else:
+        print ("Incorrect")
 
 if attempt == answer:
     print("####CORRECT!####\n")
 
 else:
     print("XXXXINCORRECTXXXX\n")
+
+
+
+
+    """Component 4 - Summary of players """
