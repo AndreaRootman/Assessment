@@ -81,6 +81,8 @@ while not valid:
         except ValueError:
             print(error)
 
+
+
 """component 3 - Te Reo maori numbers"""
 balance = 0
 
@@ -164,9 +166,15 @@ elif question10 == answer10:
     print("CORRECT")
 balance +=1
 
+
 """Component 4 - summary"""
 #output
 print("Calculating results.....")
 print(f"Great job hope you enjoyed, your score is.... {balance}!")
 
-
+"""Component 5 - Play again?"""
+play_again = input(f"Would you like to play again {name}? Please enter either 'yes or no'")
+if play_again == 'yes':
+    show_instructions
+elif play_again == 'no':
+    print("Farewell")
