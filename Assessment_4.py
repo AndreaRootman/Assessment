@@ -29,6 +29,13 @@ print(f"entered '{show_instructions}' ")
 
 
 """component 2- Amount of questions the player wants"""
+Prompt = None
+while Prompt not in ("yes", "y", "n", "no"): #loop until the user inputs a valid answer
+        Prompt = input("Do you wish to continue? answer y or n\n")
+        if Prompt in ('y', 'yes'):
+            state = 2 # switch state to processing state
+        elif Prompt in ('n', 'no'): #cancel
+            break
 
 #confirm question amount
 def confirm_question_amount(question_number):
@@ -58,35 +65,106 @@ while not valid:
     except ValueError:
         print(error)
 
-"""component 3 - Te Reo maori numbers"""
 
+"""component 3 - Te Reo maori numbers"""
 import random
 
-#1ST lIST
-numbers = ["Tahi", "Rua", "Toru", "Wha", "Rima", "Ono", "Whitu", "waru", "Iwa", "Tekau"]
-#2ND LIST
-ans = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+question1 = input("What is the number for Tahi?")
+answer1 = ("1")
 
-question = random.choice(numbers)
-attempt = input(f"What is the number for {question}: ")
-answer_index = numbers.index(question)
-answer = ans[answer_index]
-required_number = num_questions
-while True:
-    number = eval(input("Enter the number\n"))
-    if number == answer:
-        print ("Correct")
-        break
-    else:
-        print ("Incorrect")
+if question1 == answer1:
+    print("####CORRECT####")
 
-if attempt == answer:
-    print("####CORRECT!####\n")
+elif question1 != answer1:
+    print("####INCORRECT####")
 
-else:
-    print("XXXXINCORRECTXXXX\n")
+question2 = input("What is the number for Rua?")
+answer2 = ("2")
+
+if question2 == answer2:
+    print("####CORRECT####")
+
+elif question2 != answer2:
+    print("####INCORRECT####")
+
+question3 = input("What is the number for Toru?")
+answer3 = ("3")
+
+if question3 == answer3:
+    print("####CORRECT####")
+
+elif question3 != answer3:
+    print("####INCORRECT####")
+
+question4 = input("What is the number for Wha?")
+answer4 = ("4")
+
+if question4 == answer4:
+    print("####CORRECT####")
+
+elif question4 != answer4:
+    print("####INCORRECT####")
+
+question5 = input("What is the number for Rime?")
+answer5 = ("5")
+
+if question5 == answer5:
+    print("####CORRECT####")
+
+elif question5 != answer5:
+    print("####INCORRECT####")
+
+question6 = input("What is the number for Ono?")
+answer6 = ("6")
+
+if question6 == answer6:
+    print("####CORRECT####")
+
+elif question6 != answer6:
+    print("####INCORRECT####")
+
+question7 = input("What is the number for Whitu?")
+answer7 = ("7")
+
+if question7 == answer7:
+    print("####CORRECT####")
+
+elif question7 != answer7:
+    print("####INCORRECT####")
+
+question8 = input("What is the number for Waru?")
+answer8 = ("8")
+
+if question8 == answer8:
+    print("####CORRECT####")
+
+elif question8 != answer8:
+    print("####INCORRECT####")
+
+question9 = input("What is the number for Iwa?")
+answer9 = ("9")
+
+if question9 == answer9:
+    print("####CORRECT####")
+
+elif question9 != answer9:
+    print("####INCORRECT####")
+
+question10 = input("What is the number for Tekau?")
+answer10 = ("10")
+
+if question10 == answer10:
+    print("####CORRECT####")
+
+elif question10 != answer10:
+    print("####INCORRECT####")
+
+quest = question1, question2, question3, question4, question5, question6, question7, question8, question9, question10
+question = random.choice(quest)
+anss = answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10
 
 
-
-
-    """Component 4 - Summary of players """
+"""Component 4 - print summary"""
+def print_summary():
+    print("="*20)
+    print( )

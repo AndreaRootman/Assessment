@@ -48,6 +48,7 @@ def confirm_question_amount(question_number):
 
         else:
             return False
+        break
 error = "Please enter a whole number between 1 and 10\n"
 valid = False
 
@@ -67,32 +68,98 @@ while not valid:
 
 
 """component 3 - Te Reo maori numbers"""
-
 import random
 
-def repeat_user_input(num_tries= num_questions):
-    tries = 0
-    result = []
+question1 = input("What is the number for Tahi?")
+answer1 = ("1")
 
-    while tries < num_tries:
-        tries += 1
-        result.append(float(input()))
+if question1 == answer1:
+    print("####CORRECT####")
 
-    return result
+elif question1 != answer1:
+    print("####INCORRECT####")
 
-#1ST lIST
-numbers = ["Tahi", "Rua", "Toru", "Wha", "Rima", "Ono", "Whitu", "waru", "Iwa", "Tekau"]
-#2ND LIST
-ans = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+question2 = input("What is the number for Rua?")
+answer2 = ("2")
 
-question = random.choice(numbers)
-attempt = input(f"What is the number for {question}: ")
+if question2 == answer2:
+    print("####CORRECT####")
 
-answer_index = numbers.index(question)
-answer = ans[answer_index]
+elif question2 != answer2:
+    print("####INCORRECT####")
 
-if attempt == answer:
-    print("####CORRECT!####\n")
+question3 = input("What is the number for Toru?")
+answer3 = ("3")
 
-else:
-    print("XXXXINCORRECTXXXX\n")
+if question3 == answer3:
+    print("####CORRECT####")
+
+elif question3 != answer3:
+    print("####INCORRECT####")
+
+question4 = input("What is the number for Wha?")
+answer4 = ("4")
+
+if question4 == answer4:
+    print("####CORRECT####")
+
+elif question4 != answer4:
+    print("####INCORRECT####")
+
+question5 = input("What is the number for Rime?")
+answer5 = ("5")
+
+if question5 == answer5:
+    print("####CORRECT####")
+
+elif question5 != answer5:
+    print("####INCORRECT####")
+
+question6 = input("What is the number for Ono?")
+answer6 = ("6")
+
+if question6 == answer6:
+    print("####CORRECT####")
+
+elif question6 != answer6:
+    print("####INCORRECT####")
+
+question7 = input("What is the number for Whitu?")
+answer7 = ("7")
+
+if question7 == answer7:
+    print("####CORRECT####")
+
+elif question7 != answer7:
+    print("####INCORRECT####")
+
+question8 = input("What is the number for Waru?")
+answer8 = ("8")
+
+if question8 == answer8:
+    print("####CORRECT####")
+
+elif question8 != answer8:
+    print("####INCORRECT####")
+
+question9 = input("What is the number for Iwa?")
+answer9 = ("9")
+
+if question9 == answer9:
+    print("####CORRECT####")
+
+elif question9 != answer9:
+    print("####INCORRECT####")
+
+question10 = input("What is the number for Tekau?")
+answer10 = ("10")
+
+if question10 == answer10:
+    print("####CORRECT####")
+
+elif question10 != answer10:
+    print("####INCORRECT####")
+
+quest = question1, question2, question3, question4, question5, question6, question7, question8, question9, question10
+question = random.choice(quest)
+anss = answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10
