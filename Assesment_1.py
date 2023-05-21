@@ -3,7 +3,6 @@
 def get_name():
     name_local = input("what is your name: ")
     return name_local
-score = 0
 
 def get_age():
     age_local = int(input("How old are you: "))
